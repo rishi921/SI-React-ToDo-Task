@@ -1,25 +1,33 @@
-.task-item {
+.task-item-container {
     display: flex;
     align-items: center;
-    padding: 10px;
     margin: 10px 0;
+    position: relative;
+}
+
+.task-item {
+    display: flex;
+    margin: 10px 0;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 10px;
     border: 1px solid #007bff;
     border-radius: 5px;
     background-color: #fff;
 }
 
-.task-item.completed {
-    background-color: #e0ffe0;
-}
-
 .task-item span {
-    margin-left: 10px;
     flex-grow: 1;
-    cursor: pointer;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
-button {
-    background-color: #dc3545;
+button.delete-btn {
+    background-color: red;
+    /* Red (danger) for Delete button */
     color: white;
     border: none;
     padding: 5px 10px;
@@ -27,6 +35,13 @@ button {
     cursor: pointer;
 }
 
-button:hover {
-    background-color: #c82333;
+button.delete-btn:hover {
+    background-color: darkred;
+    /* Darker red on hover */
+}
+
+input[type="checkbox"] {
+    position: absolute;
+    left: -30px;
+    /* Position checkbox outside of the container */
 }

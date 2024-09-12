@@ -16,7 +16,8 @@ const TaskItem = ({ task, toggleComplete, deleteTask }) => {
             >
                 {task.text}
             </span>
-            <button onClick={() => deleteTask(task.id)}>Delete</button>
+            <button className="delete-btn" onClick={() => deleteTask(task.id)}>Delete</button>
+
         </div>
     );
 };

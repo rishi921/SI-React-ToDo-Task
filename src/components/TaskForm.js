@@ -19,8 +19,10 @@ const TaskForm = ({ addTask }) => {
                 value={text}
                 onChange={(e) => setText(e.target.value)}
                 placeholder="Enter a new task"
+                required
             />
-            <button type="submit">Add Task</button>
+            <button type="submit" className="add-task-btn">Add Task</button>
+
         </form>
     );
 };

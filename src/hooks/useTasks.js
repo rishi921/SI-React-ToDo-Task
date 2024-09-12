@@ -1,17 +1,24 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { loadTasks, saveTasks } from "../services/taskService";
 
 export const useTasks = () => {
     const [tasks, setTasks] = useState([]);
+    const isFirstRender = useRef(true);
 
     useEffect(() => {
         const storedTasks = loadTasks();
         if (storedTasks) {
+            console.log("Loaded tasks from localStorage:", storedTasks);
             setTasks(storedTasks);
         }
     }, []);
 
+
     useEffect(() => {
+        if (isFirstRender.current) {
+            isFirstRender.current = false;
+            return;
+        }
         saveTasks(tasks);
     }, [tasks]);
 
