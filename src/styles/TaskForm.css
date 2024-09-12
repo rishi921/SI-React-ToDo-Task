@@ -16,7 +16,6 @@ input {
 button.add-task-btn {
     padding: 10px 20px;
     background-color: #007bff;
-    /* Blue (primary) for Add Task button */
     color: white;
     border: none;
     border-radius: 5px;
@@ -26,5 +25,4 @@ button.add-task-btn {
 
 button.add-task-btn:hover {
     background-color: #0056b3;
-    /* Darker blue on hover */
 }

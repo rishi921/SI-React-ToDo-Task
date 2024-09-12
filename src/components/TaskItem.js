@@ -4,7 +4,6 @@ import "../styles/TaskItem.css";
 const TaskItem = ({ task, toggleComplete, deleteTask }) => {
     return (
         <div className={`task-item ${task.completed ? "completed" : ""}`}>
-            {/* Checkbox to toggle task completion */}
             <input
                 type="checkbox"
                 checked={task.completed}

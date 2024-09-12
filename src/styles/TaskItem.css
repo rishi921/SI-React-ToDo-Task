@@ -27,7 +27,6 @@
 
 button.delete-btn {
     background-color: red;
-    /* Red (danger) for Delete button */
     color: white;
     border: none;
     padding: 5px 10px;
@@ -37,11 +36,9 @@ button.delete-btn {
 
 button.delete-btn:hover {
     background-color: darkred;
-    /* Darker red on hover */
 }
 
 input[type="checkbox"] {
     position: absolute;
     left: -30px;
-    /* Position checkbox outside of the container */
 }
