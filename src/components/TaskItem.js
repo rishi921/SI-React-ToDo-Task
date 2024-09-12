@@ -1,10 +1,19 @@
 import React from "react";
-import "../styles/TaskItem.css"
+import "../styles/TaskItem.css";
 
 const TaskItem = ({ task, toggleComplete, deleteTask }) => {
     return (
         <div className={`task-item ${task.completed ? "completed" : ""}`}>
-            <span onClick={() => toggleComplete(task.id)}>
+            {/* Checkbox to toggle task completion */}
+            <input
+                type="checkbox"
+                checked={task.completed}
+                onChange={() => toggleComplete(task.id)}
+            />
+            <span
+                onClick={() => toggleComplete(task.id)}
+                style={{ textDecoration: task.completed ? "line-through" : "none" }}
+            >
                 {task.text}
             </span>
             <button onClick={() => deleteTask(task.id)}>Delete</button>
